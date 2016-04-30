@@ -1,0 +1,17 @@
+.one{
+  /*display: block;*/
+  border: 1px solid black;
+  width: 230px;
+  margin: 0px;
+}
+.two{
+display: inline;
+  width: 700px;
+  margin: 1px;
+}
+.three{
+  border: 10px solid black;
+}
+.four{
+  border: 10px solid black;
+}

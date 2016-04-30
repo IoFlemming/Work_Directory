@@ -1,0 +1,52 @@
+body{
+background-color: #FFD700;
+margin: 0;
+}
+header{
+background-color: #4A0000;
+color: white;
+padding: 5px 15px 0 15px;
+}
+header h1{
+color: #FFD700;
+margin:0;
+text-align: center;
+}
+nav ul{
+margin:0;
+text-align: center;
+padding: 0 0 5px 0;
+
+<!--In order for the header to line up navbar, you have to first text align:center;
+both the (header h1) and the (nav ul) and then add padding to (nav ul). In order
+to line them both up evenly, add padding in (nav ul). Depending on how much the
+numerical px value is, will determine the distance from the the (nav ul) content
+and the (header h1)content.-->
+}
+nav ul li{
+list-style-type: none;
+display: inline-block;
+background: #4A0000;
+color: #FFD700;
+padding: 5px 15px 0;
+
+}
+nav ul li a{
+color: #FFD700;
+}
+a {
+text-decoration: none;
+}
+a:hover{
+text-decoration:none;
+cursor:pointer;
+}
+img{
+width: 30%;
+float: left;
+margin: 1.66%;
+}
+footer{
+clear: both;
+text-decoration: none;
+}
