@@ -1,0 +1,114 @@
+/* list-style: none removes the list item indicators from the unordered list item.
+In this case, the small black dots that were next to each number.*/
+
+ul {
+  list-style: none;
+}
+
+/* Assigning a 100px height and width to the class of list-images causes the images to
+overlap each other, which is not good. Adding a command of cursor:pointer; to this class
+causes each image that falls under this class to have a cursor pointer, (white finger), hover over
+the images. (The same pointer that appears over a image or text that has a link to another
+page embbed in it).*/
+
+/* Question - the width and height that is being affected in this class is the
+padding or margin surrounding the image, correct? Because in this class, the images themselves remain
+the same width and height but only the images have moved. I'm assuming the padding or margin that
+surrounds each image has shrunk down to 100px and since the images are still the original
+height and width this has caused the images to overlap one another.  */
+
+.list-image {
+ height: 100px;
+ width: 100px;
+ cursor: pointer;
+}
+
+/*Each of the images has a thin, purple box shaped border around it. It can not be
+seen clearly because the images have overlapped each other.*/
+
+.list-image:hover {
+  outline: 1px solid purple;
+}
+
+
+/* The images specifically now  are given a height and width of 100%. I assume the images have overlapped
+each other because the set amount of padding or margin that each image has been given has been
+given the length and width of 100px. The images themselves on the other hand have remained
+the same sizes and caused the images to overlap each other. Including "img" into the list-image
+class specifically tells the CSS page that you want each image that is attached to the
+list-image class to now shrink down to 100% length and 100% width. This now makes all the
+images equal in length and width, ridding the page of overlapping images.*/
+
+/* Question - I changed the % sign to px at the end of 100 and nothing changed, the images remained
+the designated width and height of 100. Was there a specific reason why you used % instead of px or is
+it a personal choice to use either?*/
+
+.list-image img {
+  height: 100%;
+  width: 100%;
+}
+
+ /*When you apply display: inline-block to list-top li, it does not do anything by itself.
+ Once you add a float: left to the id of list-left the block of numbers 1,2 and 3 move away slightly
+ from the block of numbers 4,5 and 6.*/
+list-top li {
+ display:inline;
+
+}
+/* When you apply a float: left; to the id "list-left" it causes the block of images of 4,5 and 6
+to move slightly away from the block of images of 1,2 and 3. */
+#list-left{
+  float: left;
+}
+/* Creating a div id of "display-container" around the block of images 7,8 and 9
+does a couple of things. First, the commands border: 1px solid blue;, height:500px and
+width: 500px together creates a thinly lined, solid blue box that is 500px in length and width on the html page.
+Second, the command "position: relative"  in combination with "float: left" causes the box to move away from the
+edge of the HTML page and float left of the block of images 4,5 and 6., (The block of images 7
+and 8 also moves from behind the images 5 and 6 once you float the display container
+left and assign it a relative position. The block of images 7,8 and 9 will now follow
+the box wherever it goes because you have now made the #display-container's position relative.
+This means that the #display-container has now been assigned the leader and the block of
+images 7,8 and 9, have now become the box's followers. In the event the #display-container
+no longer becomes the leader, (such as in the case where I cut #display-container out completely from
+the CSS page), the HTML page will become the de facto leader and the block of
+images 7,8 and 9 will now become the follower of the HTML page,(which is fixed?).) */
+#display-container {
+  float: left;
+  border: 1px solid blue;
+  height: 500px;
+  width: 500px;
+  position: relative;
+}
+
+/* The #display id has been assigned the block of images 7, 8 and 9 on the HTML page
+"<img id='display' src=''/>". I noticed that when you assign the height and width of 500px
+it does not change the image size, it just moves the image to what I'm assuming is 500px down from
+the top left corner of the #display-container.
+
+I understand the block of images 7, 8 and 9 are now absolute, (follower) to the relative, (leader)
+position of the box, (the block of images 7, 8 and 9 are now the followers of the leader
+which is now the #display-container instead of the default leader, the HTML page itself).
+
+What I don't understand is why does the height and width move the image in this
+instance instead of increasing its size?*/
+
+#display {
+  height: 500px;
+  width: 500px;
+}
+/* In this id we have assigned the block of images 7,8 and 9 an absolute position,
+(So that we have more control over where we move the block images 7,8 and 9?).
+Once we do that, we assigned a margin of 0 to the block of images 7,8 and 9 which
+moves the block up slightly so that there is 0 space between the content, (the block of images 7, 8 and 9), and
+the #display-container. Next, we apply a bottom command of -200px to move the block of images
+7,8 and 9 from it's current position up into the display container, (Only 7 is inside
+the container. 8 and 9 remain outside of the display container).Lastly, we apply
+a right command to the id and it causes the image block 7, 8 and 9 to move to the far
+right of the #display-container.*/
+#list-left-bottom {
+  position: absolute;
+  margin: 0;
+  bottom: -200px;
+  right: 0px;
+}
