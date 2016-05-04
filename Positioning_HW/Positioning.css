@@ -1,0 +1,32 @@
+#Father{
+position:relative;
+width:250px;
+height:250px;
+background-color:red;
+
+}
+
+#child1{
+position:absolute;
+width:100px;
+height:100px;
+background-color:green;
+left:350px;
+
+}
+
+#child2{
+position: absolute;
+background-color: orange;
+width:100px;
+height:100px;
+right:0px;
+}
+
+#child3{
+position: fixed;
+background-color: yellow;
+width:100px;
+height:100px;
+bottom: 50px;
+}
