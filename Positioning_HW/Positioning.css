@@ -1,32 +1,41 @@
 #Father{
 position:relative;
-width:250px;
+width:699px;
 height:250px;
 background-color:red;
 
 }
 
 #child1{
-position:absolute;
-width:100px;
-height:100px;
-background-color:green;
-left:350px;
+ position:absolute;
+ width:499px;
+ height:100px;
+ background-color:green;
+ top: 0;
+ left: 0;
+ }
+/* When I extend "Child1" out past the
+ width of 499px, it starts to push out the
+ "Child2" box from the "Father" box. Why is that?
+ Shouldn't "Child1" overlap "Child2" or is
+ it because "Child 2 is not in a fixed position"?*/
 
-}
 
 #child2{
-position: absolute;
-background-color: orange;
-width:100px;
-height:100px;
-right:0px;
-}
+ position: absolute;
+ color: white;
+ background-color: black;
+ width:100px;
+ height:250px;
+ bottom: -150px;
+ right: -200px;
 
+}
 #child3{
-position: fixed;
-background-color: yellow;
-width:100px;
-height:100px;
-bottom: 50px;
+ position: fixed;
+ background-color: yellow;
+ width:600px;
+ height:100px;
+ top: 160px;
+ left: 7px;
 }
